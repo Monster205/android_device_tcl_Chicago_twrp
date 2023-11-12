@@ -29,16 +29,16 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/roo
     $(LOCAL_PATH)/prebuilt/dtb:dtb.img
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := picasso
-PRODUCT_NAME := omni_picasso
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi K30 5G
-PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_RELEASE_NAME := Redmi K30 5G
+PRODUCT_DEVICE := Chicago
+PRODUCT_NAME := omni_Chicago
+PRODUCT_BRAND := TCL
+PRODUCT_MODEL := flex v
+PRODUCT_MANUFACTURER := tcl
+PRODUCT_RELEASE_NAME := flex v
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="Redmi/picasso/picasso:10/QKQ1.191117.002/20.1.13:user/release-keys" \
-    PRIVATE_BUILD_DESC="picasso-user 10 QKQ1.191117.002 20.1.13 release-keys"
+    BUILD_FINGERPRINT="TCL/T850Y_EEA/Chicago11/RKQ1.210107/6B22user/release-keys" \
+    PRIVATE_BUILD_DESC="Chicago-user 11R/KQ1.210107.001/6B22:user/release-keys"
 
 # Stock flashable zips
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
