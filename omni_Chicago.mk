@@ -1,7 +1,7 @@
 #
 # Copyright (C) 2020 The Android Open Source Project
 # Copyright (C) 2020 PitchBlack Recovery Project
-# Copyright (C) 2020 SebaUbuntu's TWRP device tree generator 
+# Copyright (C) 2020 SebaUbuntu's TWRP device tree generator
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,23 +22,23 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 DEVICE_PATH := device/tcl/Chicago
 
 # Inherit some common PitchBlack stuff.
-$(call inherit-product, vendor/pb/config/common.mk)
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) \
     $(LOCAL_PATH)/prebuilt/dtb:dtb.img
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := picasso
-PRODUCT_NAME := omni_picasso
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi K30 5G
-PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_RELEASE_NAME := Redmi K30 5G
+PRODUCT_DEVICE := Chicago
+PRODUCT_NAME := omni_Chicago
+PRODUCT_BRAND := TCL
+PRODUCT_MODEL := flex v
+PRODUCT_MANUFACTURER := tcl
+PRODUCT_RELEASE_NAME := flex v
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="Redmi/picasso/picasso:10/QKQ1.191117.002/20.1.13:user/release-keys" \
-    PRIVATE_BUILD_DESC="picasso-user 10 QKQ1.191117.002 20.1.13 release-keys"
+    BUILD_FINGERPRINT="TCL/T850Y_EEA/Chicago11/RKQ1.210107/6B22user/release-keys" \
+    PRIVATE_BUILD_DESC="Chicago-user 11R/KQ1.210107.001/6B22:user/release-keys"
 
 # Stock flashable zips
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -47,5 +47,3 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.security_patch=2099-12-31 \
-    ro.build.date=Tue May 3 20:05:48 KST 2016 \
-    ro.build.date.utc=1462273548

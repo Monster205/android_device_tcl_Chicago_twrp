@@ -1,7 +1,7 @@
 #
 # Copyright (C) 2020 The Android Open Source Project
 # Copyright (C) 2020 PitchBlack Recovery Project
-# Copyright (C) 2020 SebaUbuntu's TWRP device tree generator 
+# Copyright (C) 2020 SebaUbuntu's TWRP device tree generator
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ DEVICE_PATH := device/tcl/Chicago
 # A/B
 AB_OTA_UPDATER := true
 BOARD_USES_RECOVERY_AS_BOOT := true
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 AB_OTA_PARTITIONS += \
 		         system \
 			     product \
@@ -71,7 +70,7 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/image.gz
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
@@ -141,3 +140,6 @@ TW_SCREEN_BLANK_ON_BOOT := false
 ALLOW_MISSING_DEPENDENCIES=true
 TARGET_SUPPORTS_64_BIT_APPS := true
 TARGET_USES_64_BIT_BINDER := true
+# fstab
+
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
